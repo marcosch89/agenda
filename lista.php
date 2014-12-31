@@ -9,10 +9,12 @@ require_once 'menu.php';
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Clientes</h1>
+            <a href="cadastro.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
+                Novo Cliente</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
+
                     <tr>
-                        <th> ID </th>
                         <th> Nome Completo </th>
                         <th> Estado </th>
                         <th> Cidade </th>
@@ -23,68 +25,54 @@ require_once 'menu.php';
                         <th> Telefone </th>
                         <th> Email </th>
                         <th> Médico Solicitado </th>
+                        <th> Editar </th>
+                        <th> Excluir </th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td> Fulano de tal </td>
-                        <td> RR </td>
-                        <td> Boa-Vista</td>
-                        <td> Bem ali</td>
-                        <td> 222222 </td>
-                        <td> Solteiro </td>
-                        <td> 123.456.789-10 </td>
-                        <td> 1234-1542 </td>
-                        <td> batatas@gmail.com </td>
-                        <td> Dentista </td>
+                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                        <tr>
+                            <td> Fulano de tal </td>
+                            <td> RR </td>
+                            <td> Boa-Vista</td>
+                            <td> Bem ali</td>
+                            <td> 222222 </td>
+                            <td> Solteiro </td>
+                            <td> 123.456.789-10 </td>
+                            <td> 1234-1542 </td>
+                            <td> batatas@gmail.com </td>
+                            <td> Dentista </td>
+                            <td> <a href="editarlista.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
-                    </tr>
-                    <tr>
-                        <td> 2 </td>
-                        <td> Fulano de tal </td>
-                        <td> RR </td>
-                        <td> Boa-Vista</td>
-                        <td> Bem ali</td>
-                        <td> 222222 </td>
-                        <td> Solteiro </td>
-                        <td> 123.456.789-10 </td>
-                        <td> 1234-1542 </td>
-                        <td> batatas@gmail.com </td>
-                        <td> Dentista </td>
-
-                    </tr>
-                    <tr>
-                        <td> 3 </td>
-                        <td> Fulano de tal </td>
-                        <td> RR </td>
-                        <td> Boa-Vista</td>
-                        <td> Bem ali</td>
-                        <td> 222222 </td>
-                        <td> Solteiro </td>
-                        <td> 123.456.789-10 </td>
-                        <td> 1234-1542 </td>
-                        <td> batatas@gmail.com </td>
-                        <td> Dentista </td>
-
-                    </tr>
-                    <tr>
-                        <td> 4 </td>
-                        <td> Fulano de tal </td>
-                        <td> RR </td>
-                        <td> Boa-Vista</td>
-                        <td> Bem ali</td>
-                        <td> 222222 </td>
-                        <td> Solteiro </td>
-                        <td> 123.456.789-10 </td>
-                        <td> 1234-1542 </td>
-                        <td> batatas@gmail.com </td>
-                        <td> Dentista </td>
-                    </tr>
+                                    <i class="fa fa-trash fa-1x"></i>
+                                </button></td>
+                        </tr>
+                    <?php endfor; ?>
                 </tbody>
             </table>
         </div>
+
     </div>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Excluir</h4>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este cliente?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Remover Cliente</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php
 require_once 'footer.php';
