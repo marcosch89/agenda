@@ -8,7 +8,7 @@ require_once 'menu.php';
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Horários Marcados</h1>
-            <a href="agenda.php" class="btn btn-primary"><i class="fa fa-plus"></i>
+            <a href="cadastro_horario.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
 
                 Novo Horário</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
@@ -17,7 +17,7 @@ require_once 'menu.php';
                         <th> Nome Completo </th>
                         <th> CPF </th>
                         <th> Data </th>
-                        <th> Hora </th>
+                        <th> Horário </th>
                         <th> Médico </th>
                         <th> Editar </th>
                         <th> Excluir </th>
@@ -30,7 +30,7 @@ require_once 'menu.php';
                         <td> 22/10/2015 </td>
                         <td> 08:00 </td>
                         <td> Ciclano de tal</td>
-                        <td> <a href="editarhorario.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
+                        <td> <a href="editarlista_horario.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
                         <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
                                 <i class="fa fa-trash fa-1x"></i>
                             </button></td>
@@ -85,10 +85,29 @@ require_once 'menu.php';
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Remover Cliente</button>
+                <button type="button" class="btn btn-primary">Remover Horário</button>
             </div>
         </div>
     </div>
+</div>
+
+<div class="col-md-12 col-lg-offset-5">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <?php require_once 'footer.php'; ?>

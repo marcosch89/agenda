@@ -15,15 +15,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="lista.php">Lista de Clientes Cadastrados</a></li>
+                    <li class=""><a href="lista_cliente.php">Clientes</a></li>
+                    <li class=""><a href="lista_medico.php">Médicos</a></li>
+                    <li class=""><a href="lista_usuario.php">Usuários</a></li>
+                    <li class=""><a href="lista_perfil.php">Perfis</a></li>
                     <li class="">
-                        <a href="horario.php">Horários Marcados<span class="sr-only">(current)</span></a></li>
+                        <a href="lista_horario.php">Horários Marcados<span class="sr-only">(current)</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Informações<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="contato.php">Contato</a></li>
+                            <li><a href="lista_contato.php">Contato</a></li>
                             <li class="divider"></li>
                             <li><a href="sair.php">Sair</a></li>
                         </ul>

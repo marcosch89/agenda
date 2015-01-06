@@ -11,7 +11,7 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Nome Completo:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Nome">
+                <input type="text" class="form-control" placeholder="Nome" value="Fulano de tal">
             </div>
         </div>
         <div>
@@ -37,13 +37,13 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Endereço:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="Endereço">
+                <input type="text" class="form-control" placeholder="Endereço" value="0987654567">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Registro Geral:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="RG">
+                <input type="text" class="form-control" placeholder="RG" value="0987654567">
             </div>
         </div>
         <div class="form-group">
@@ -61,19 +61,19 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">C.P.F.:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="CPF">
+                <input type="text" class="form-control" placeholder="CPF" value="3456789">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Telefone:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="Telefone">
+                <input type="text" class="form-control" placeholder="Telefone" value="9876545678">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Email:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email" value="09876@hotmail.com">
             </div>
         </div>
         <div class="form-group">
@@ -91,17 +91,12 @@ require_once 'menu.php';
                 </select>
             </div>
         </div>
-        <h1 class="text-center">Diagnóstico do Paciente</h1>
-        <div class="form-group">
-            <label class="col-sm-3 control-label">Sintomas:</label>
-            <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="sintomas">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-9">
-                <button type="submit" class="btn btn-success">Cadastrar Cliente</button>
-            </div>
+        <div class="col-md-6 col-md-offset-3">
+            <a href="lista_medico.php" class="btn btn-primary"><i class="fa fa-plus"></i>
+                Salvar Alterações</a>
+            <a href="lista_medico.php" class="btn btn-primary" role="button"><i class="fa fa-backward"></i>
+                Voltar</a>
+
         </div>
     </form>
 </div>

@@ -19,11 +19,6 @@ require_once 'menu.php';
         </address>
     </div>
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <?php
 require_once 'footer.php';

@@ -9,7 +9,7 @@ require_once 'menu.php';
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Clientes</h1>
-            <a href="cadastro.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
+            <a href="cadastro_cliente.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
                 Novo Cliente</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
@@ -43,7 +43,7 @@ require_once 'menu.php';
                             <td> 1234-1542 </td>
                             <td> batatas@gmail.com </td>
                             <td> Dentista </td>
-                            <td> <a href="editarlista.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="editarlista_cliente.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
@@ -74,5 +74,23 @@ require_once 'menu.php';
     </div>
 </div>
 
+<div class="col-md-12 col-lg-offset-5">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
 <?php
 require_once 'footer.php';
