@@ -1,7 +1,6 @@
 <?php
-require_once 'restrito.php';
-require_once 'header.php';
-require_once 'menu.php';
+require_once '../../public/header.php';
+require_once '../../public/menu.php';
 ?>
 <div class="row">
     <div class="col-md-8 col-lg-offset-1">
@@ -21,4 +20,4 @@ require_once 'menu.php';
 </div>
 
 <?php
-require_once 'footer.php';
+require_once '../../public/footer.php';

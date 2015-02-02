@@ -1,12 +1,11 @@
 <?php
-require_once 'restrito.php';
-require_once 'header.php';
-require_once 'menu.php';
+require_once '../../public/header.php';
+require_once '../../public/menu.php';
 ?>
 <div class="col-md-8 col-md-offset-2">
 
-    <form class="form-horizontal" role="form" action="lista_cliente.php">
-        <h1 class="text-center">Dados Pessoais</h1>
+    <form class="form-horizontal" role="form" action="ClientList.php">
+        <h1 class="text-center">Cadastro de Clientes</h1>
         <div class="form-group">
             <label class="col-sm-3 control-label">Nome Completo:</label>
             <div class="col-sm-9">
@@ -94,14 +93,16 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Sintomas:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="sintomas">
+                <input type="text" class="form-control" placeholder="sintomas">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-                <button type="submit" class="btn btn-success">Cadastrar Cliente</button>
+                <button type="submit" class="btn btn-success"><i class="fa fa-check"></i>Cadastrar Cliente</button>
+                <a href="ClientList.php" class="btn btn-warning" role="button"><i class="fa fa-backward"></i>
+                    Voltar</a>
             </div>
         </div>
     </form>
 </div>
-<?php require_once 'footer.php'; ?>
+<?php require_once '../../Public/footer.php'; ?>

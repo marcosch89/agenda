@@ -27,7 +27,7 @@
                         elseif (empty($senhaLogin)):
                             echo 'digite sua senha. <a href="index.php">TRY AGAIN</a>';
                         else:
-                            include_once 'config.php';
+                            include_once './public/config.php';
                             if ($usuarioLogin == $usuario and $senhaLogin == $senha):
                                 echo 'dados corretos';
 
@@ -35,7 +35,7 @@
                                 $_SESSION['usuarioSession'] = $usuarioLogin;
                                 $_SESSION['senhaSession'] = $senhaLogin;
 
-                                header("Location: home.php");
+                                header("Location:../../view/home/home.php");
                             else:
                                 echo 'Erro na autenticação. <br/> <a href="index.php">Tente Novamente</a>';
                             endif;

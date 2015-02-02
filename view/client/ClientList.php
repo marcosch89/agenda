@@ -1,7 +1,7 @@
 <?php
-require_once 'restrito.php';
-require_once 'header.php';
-require_once 'menu.php';
+require_once '../../public/restrito.php';
+require_once '../../public/header.php';
+require_once '../../public/menu.php';
 ?>
 
 
@@ -9,7 +9,7 @@ require_once 'menu.php';
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Clientes</h1>
-            <a href="cadastro_cliente.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
+            <a href="/view/client/ClientRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
                 Novo Cliente</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
@@ -43,7 +43,7 @@ require_once 'menu.php';
                             <td> 1234-1542 </td>
                             <td> batatas@gmail.com </td>
                             <td> Dentista </td>
-                            <td> <a href="editarlista_cliente.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="ClientEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
@@ -67,8 +67,8 @@ require_once 'menu.php';
                 Tem certeza que deseja excluir este cliente?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Remover Cliente</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-danger">Remover Cliente</button>
             </div>
         </div>
     </div>
@@ -93,4 +93,4 @@ require_once 'menu.php';
     </ul>
 </div>
 <?php
-require_once 'footer.php';
+require_once '../../Public/footer.php';

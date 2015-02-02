@@ -10,22 +10,22 @@
         <script src="js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-        <title>My System</title>
+        <title>Meu Sistema</title>
     </head>
     <body>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-            <h3 class="text-center"><b>LOGIN</b></h3>
-                <form name="login" method="post" action="login.php">
+            <h3 class="text-center"><b>Página de Acesso</b></h3>
+            <form name="login" method="post" action="login.php">
                     <div class="form-group">
                         <label>Usuario</label>
                         <input type="text" name="usuario" class="form-control" placeholder="Usuario">
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" name="senha" class="form-control" placeholder="Password">
+                        <label>Senha</label>
+                        <input type="password" name="senha" class="form-control" placeholder="Senha">
                     </div>
-                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-forward"></span>  Enviar</button>
+                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-forward"></span>Conectar-se</button>
                 </form>
             </div>
         </div>

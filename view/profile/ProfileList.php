@@ -1,22 +1,20 @@
 <?php
-require_once 'restrito.php';
-require_once 'header.php';
-require_once 'menu.php';
+require_once '../../public/header.php';
+require_once '../../public/menu.php';
 ?>
 
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
-            <h1 class="text-center">Lista de Usuários</h1>
-            <a href="cadastro_usuario.php" class="btn btn-primary"><i class="fa fa-sign-in"></i>
-                Novo Usuário</a><br /><br />
+            <h1 class="text-center">Lista de Perfil</h1>
+            <a href="ProfileRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+                Novo Perfil</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
 
                     <tr>
-                        <th> Nome Completo </th>
-                        <th> Perfil </th>
+                        <th> Descrição </th>
                         <th> Editar </th>
                         <th> Excluir </th>
 
@@ -25,9 +23,8 @@ require_once 'menu.php';
                 <tbody>
                     <?php for ($index = 0; $index < 10; $index++) : ?>
                         <tr>
-                            <td> Fulano de tal </td>
                             <td> Admin </td>
-                            <td> <a href="editarlista_usuario.php" class="btn btn-info"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="ProfileEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
@@ -48,11 +45,11 @@ require_once 'menu.php';
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
             <div class="modal-body">
-                Tem certeza que deseja excluir este usuário?
+                Tem certeza que deseja excluir este perfil?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Remover Usuário</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-danger">Remover Perfil</button>
             </div>
         </div>
     </div>
@@ -77,4 +74,4 @@ require_once 'menu.php';
     </ul>
 </div>
 <?php
-require_once 'footer.php';
+require_once '../../public/footer.php';

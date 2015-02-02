@@ -1,17 +1,15 @@
 <?php
-require_once 'restrito.php';
-require_once 'header.php';
-require_once 'menu.php';
+require_once '../../public/header.php';
+require_once '../../public/menu.php';
 ?>
-
 <div class="col-md-8 col-md-offset-2">
 
-    <form class="form-horizontal" role="form" action="lista.php">
-        <h1 class="text-center">Dados Pessoais</h1>
+    <form class="form-horizontal" role="form" action="DoctorList.php">
+        <h1 class="text-center">Cadastro de Médicos</h1>
         <div class="form-group">
             <label class="col-sm-3 control-label">Nome Completo:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Nome" value="Fulano de tal">
+                <input type="text" class="form-control" placeholder="Nome">
             </div>
         </div>
         <div>
@@ -37,13 +35,13 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Endereço:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Endereço" value="0987654567">
+                <input type="text" class="form-control" placeholder="Endereço">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Registro Geral:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="RG" value="0987654567">
+                <input type="text" class="form-control" placeholder="RG">
             </div>
         </div>
         <div class="form-group">
@@ -61,23 +59,23 @@ require_once 'menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">C.P.F.:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="CPF" value="3456789">
+                <input type="text" class="form-control" placeholder="CPF">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Telefone:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Telefone" value="9876545678">
+                <input type="text" class="form-control" placeholder="Telefone">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Email:</label>
             <div class="col-sm-9">
-                <input type="email" class="form-control" placeholder="Email" value="09876@hotmail.com">
+                <input type="email" class="form-control" placeholder="Email">
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-3 control-label">Médico Solicitado:</label>
+            <label class="col-sm-3 control-label">Especialidade:</label>
             <div class="col-sm-9">
                 <select class="form-control">
 
@@ -91,17 +89,13 @@ require_once 'menu.php';
                 </select>
             </div>
         </div>
-        <h1 class="text-center">Diagnóstico do Paciente</h1>
         <div class="form-group">
-            <label class="col-sm-3 control-label">Sintomas:</label>
-            <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="sintomas" value="Gripe">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-success"><i class="fa fa-check-circle"></i>Cadastrar Médico</button>
+                <a href="DoctorList.php" class="btn btn-warning" role="button"><i class="fa fa-backward"></i>
+                Voltar</a>
             </div>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-            <a href="horario.php" class="btn btn-primary"><i class="fa fa-plus"></i>
-                Salvar Alterações</a>
         </div>
     </form>
 </div>
-<?php require_once 'footer.php'; ?>
+<?php require_once '../../public/footer.php'; ?>
