@@ -2,20 +2,15 @@
 
 namespace control\client;
 
-class ClientControl {
+require_once '../../control/common/CrudControl.php';
 
-    protected $pdo;
-    protected $table;
+use control\common\CrudControl;
 
+class ClientControl extends CrudControl {
 
     public function __construct() {
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_client';
-    }
-
-    public function getAll() {
-        $consulta = $this->pdo->query("SELECT * FROM $this->table;");
-        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
     }
 
 }
