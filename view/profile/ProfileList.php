@@ -1,6 +1,11 @@
 <?php
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/profile/ProfileControl.php';
+
+use control\profile\ProfileControl;
+
+$profile = new ProfileControl();
 ?>
 
 
@@ -21,16 +26,16 @@ require_once '../../public/menu.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                    <?php foreach ($profile->getall() as $value) : ?>
                         <tr>
-                            <td> Admin </td>
+                            <td> <?= $value['profile_description']; ?> </td>
                             <td> <a href="ProfileEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
