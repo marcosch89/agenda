@@ -1,6 +1,11 @@
 <?php
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/doctor/DoctorControl.php';
+
+use control\doctor\DoctorControl;
+
+$doctor = new DoctorControl();
 ?>
 
 
@@ -30,25 +35,25 @@ require_once '../../public/menu.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                    <?php foreach ($doctor->getAll() as $value) : ?>
                         <tr>
-                            <td> Fulano de tal </td>
-                            <td> RR </td>
-                            <td> Boa-Vista</td>
-                            <td> Bem ali</td>
-                            <td> 222222 </td>
-                            <td> Solteiro </td>
-                            <td> 123.456.789-10 </td>
-                            <td> 1234-1542 </td>
-                            <td> batatas@gmail.com </td>
-                            <td> Dentista </td>
+                            <td> <?= $value['doctor_name']; ?> </td>
+                            <td> <?= $value['doctor_state']; ?> </td>
+                            <td> <?= $value['doctor_city']; ?> </td>
+                            <td> <?= $value['doctor_adress']; ?> </td>
+                            <td> <?= $value['doctor_rg']; ?> </td>
+                            <td> <?= $value['doctor_speciality']; ?> </td>
+                            <td> <?= $value['doctor_cpf']; ?> </td>
+                            <td> <?= $value['doctor_phone']; ?> </td>
+                            <td> <?= $value['doctor_removed']; ?> </td>
+                            <td> <?= $value['doctor_email']; ?> </td>
                             <td> <a href="DoctorEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
