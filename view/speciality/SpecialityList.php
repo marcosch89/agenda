@@ -1,6 +1,11 @@
 <?php
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/speciality/SpecialityControl.php';
+
+use control\speciality\SpecialityControl;
+
+$speciality = new SpecialityControl();
 ?>
 
 
@@ -21,16 +26,16 @@ require_once '../../public/menu.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                    <?php foreach ($speciality->getAll() as $value) : ?>
                         <tr>
-                            <td> Cirurgiao </td>
+                            <td> <?= $value['speciality_name']; ?> </td>
                             <td> <a href="SpecialityEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
