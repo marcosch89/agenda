@@ -1,6 +1,12 @@
 <?php
+require_once '../../public/restrito.php';
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/user/UserControl.php';
+
+use control\user\UserControl;
+
+$user = new UserControl();
 ?>
 
 
@@ -22,9 +28,11 @@ require_once '../../public/menu.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                    <?php foreach ($user->getAll() as $value) : ?>
                         <tr>
-                            <td> Fulano de tal </td>
+                            <td> <?=$value['user_name'];?> </td>
+                            <td> <?=$value['user_profile'];?> </td>
+                            <td> <?=$value['user_removed'];?> </td>
                             <td> Admin </td>
                             <td> <a href="UserEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
@@ -32,7 +40,7 @@ require_once '../../public/menu.php';
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
