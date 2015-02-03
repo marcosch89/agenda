@@ -1,16 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace control\schedule;
 
-/**
- * Description of ScheduleControl
- *
- * @author marco
- */
 class ScheduleControl {
-    //put your code here
+
+    protected $pdo;
+
+    public function __construct() {
+        $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
+    }
+
+    public function getAll() {
+        $consulta = $this->pdo->query("SELECT * FROM appointment_schedule;");
+        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
 }

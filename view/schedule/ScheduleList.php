@@ -1,6 +1,11 @@
 <?php
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/schedule/ScheduleControl.php';
+
+use control\schedule\ScheduleControl;
+
+$schedule = new ScheduleControl();
 ?>
 
 <div class="row">
@@ -23,50 +28,21 @@ require_once '../../public/menu.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> Fulano de tal </td>
-                        <td> 11111111111</td>
-                        <td> 22/10/2015 </td>
-                        <td> 08:00 </td>
-                        <td> Ciclano de tal</td>
-                        <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                        <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-trash fa-1x"></i>
-                            </button></td>
-                    </tr>
-                    <tr>
-                        <td> Fulano de tal </td>
-                        <td> 11111111111</td>
-                        <td> 22/10/2015 </td>
-                        <td> 08:00 </td>
-                        <td> Ciclano de tal</td>
-                        <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                        <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-trash fa-1x"></i>
-                            </button></td>
-                    </tr>
-                    <tr>
-                        <td> Fulano de tal </td>
-                        <td> 11111111111</td>
-                        <td> 22/10/2015 </td>
-                        <td> 08:00 </td>
-                        <td> Ciclano de tal</td>
-                        <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                        <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-trash fa-1x"></i>
-                            </button></td>
-                    </tr>
-                    <tr>
-                        <td> Fulano de tal </td>
-                        <td> 11111111111</td>
-                        <td> 22/10/2015 </td>
-                        <td> 08:00 </td>
-                        <td> Ciclano de tal</td>         
-                        <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                        <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                                <i class="fa fa-trash fa-1x"></i>
-                            </button></td>
-                    </tr>
+                    <?php foreach ($schedule->getAll() as $value) : ?>
+
+
+                        <tr>
+                            <td> <?= $value['schedule_client']; ?> </td>
+                            <td> <?= $value['schedule_doctor']; ?> </td>
+                            <td> <?= $value['schedule_time']; ?> </td>
+                            <td> <?= $value['schedule_removed']; ?> </td>
+                            <td> <?= $value['schedule_cpf']; ?> </td>
+                            <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                    <i class="fa fa-trash fa-1x"></i>
+                                </button></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
