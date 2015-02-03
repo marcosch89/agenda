@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/marco/agenda/agenda/model/user/UserEntity.php</file>
+            <file>file:/home/marco/agenda/agenda/model/client/ClientEntity.php</file>
+            <file>file:/home/marco/agenda/agenda/model/profile/ProfileEntity.php</file>
+            <file>file:/home/marco/agenda/agenda/model/schedule/ScheduleEntity.php</file>
+            <file>file:/home/marco/agenda/agenda/model/doctor/DoctorEntity.php</file>
+        </group>
     </open-files>
 </project-private>

@@ -2,6 +2,11 @@
 require_once '../../public/restrito.php';
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
+require_once '../../control/client/ClientControl.php';
+
+use control\client\ClientControl;
+
+$client = new ClientControl();
 ?>
 
 
@@ -24,32 +29,32 @@ require_once '../../public/menu.php';
                         <th> CPF </th>
                         <th> Telefone </th>
                         <th> Email </th>
-                        <th> Médico Solicitado </th>
+                        <!--<th> Médico Solicitado </th>-->
                         <th> Editar </th>
                         <th> Excluir </th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($index = 0; $index < 10; $index++) : ?>
+                    <?php foreach ($client->getAll() as $value) : ?>
                         <tr>
-                            <td> Fulano de tal </td>
-                            <td> RR </td>
-                            <td> Boa-Vista</td>
-                            <td> Bem ali</td>
-                            <td> 222222 </td>
-                            <td> Solteiro </td>
-                            <td> 123.456.789-10 </td>
-                            <td> 1234-1542 </td>
-                            <td> batatas@gmail.com </td>
-                            <td> Dentista </td>
+                            <td> <?= $value['client_name']; ?> </td>
+                            <td> <?= $value['client_state']; ?> </td>
+                            <td> <?= $value['client_city']; ?> </td>
+                            <td> <?= $value['client_adress']; ?> </td>
+                            <td> <?= $value['client_rg']; ?> </td>
+                            <td> <?= $value['client_relationship_status']; ?> </td>
+                            <td> <?= $value['client_cpf']; ?> </td>
+                            <td> <?= $value['client_phone']; ?> </td>
+                            <td> <?= $value['client_email']; ?> </td>
+                            <td> <?= $value['client_email']; ?> </td>
                             <td> <a href="ClientEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
