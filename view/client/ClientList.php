@@ -29,7 +29,6 @@ $client = new ClientControl();
                         <th> CPF </th>
                         <th> Telefone </th>
                         <th> Email </th>
-                        <!--<th> Médico Solicitado </th>-->
                         <th> Editar </th>
                         <th> Excluir </th>
 
@@ -46,7 +45,6 @@ $client = new ClientControl();
                             <td> <?= $value['client_relationship_status']; ?> </td>
                             <td> <?= $value['client_cpf']; ?> </td>
                             <td> <?= $value['client_phone']; ?> </td>
-                            <td> <?= $value['client_email']; ?> </td>
                             <td> <?= $value['client_email']; ?> </td>
                             <td> <a href="ClientEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">

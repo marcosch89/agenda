@@ -32,8 +32,6 @@ $user = new UserControl();
                         <tr>
                             <td> <?=$value['user_name'];?> </td>
                             <td> <?=$value['user_profile'];?> </td>
-                            <td> <?=$value['user_removed'];?> </td>
-                            <td> Admin </td>
                             <td> <a href="UserEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 

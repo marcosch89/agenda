@@ -15,16 +15,16 @@ require_once '../../public/menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Perfil:</label>
             <div class="col-sm-9">
-                <select class="form-control">
-                    <option>Usuário</option>
-                    <option>Admin</option>
+                <select class="form-control" name="perfil">
+                    <option value="1">Usuário</option>
+                    <option value="2">Admin</option>
                 </select>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-3 control-label">Senha:</label>
             <div class="col-sm-9">
-                <input type="password" class="form-control" placeholder="senha">
+                <input type="password" name="senha" class="form-control" placeholder="senha">
             </div>
         </div>
         <div class="form-group">

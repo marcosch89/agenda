@@ -14,9 +14,10 @@ class UserControl extends CrudControl {
     }
 
     public function insert($data) {
-        $stmt = $this->pdo->prepare("INSERT INTO $this->table (user_name)VALUES (:nome)");
+        $stmt = $this->pdo->prepare("INSERT INTO $this->table (user_name, user_profile)VALUES (:nome,:perfil)");
         $stmt->execute(array(
-            ':nome' => $data['nome']
+            ':nome' => $data['nome'],
+            ':perfil' => $data['perfil']
         ));
     }
 
