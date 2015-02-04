@@ -12,5 +12,7 @@ class ClientControl extends CrudControl {
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_client';
     }
+    
+  
 
 }

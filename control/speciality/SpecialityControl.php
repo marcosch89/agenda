@@ -2,17 +2,15 @@
 
 namespace control\speciality;
 
-class SpecialityControl {
-    protected $pdo;
-    protected $table;
+require_once '../../control/common/CrudControl.php';
+
+use control\common\CrudControl;
+
+class SpecialityControl extends CrudControl {
 
     public function __construct() {
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_speciality';
     }
 
-    public function getAll() {
-        $consulta = $this->pdo->query("SELECT * FROM $this->table;");
-        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
-    }
 }

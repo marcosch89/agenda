@@ -2,19 +2,16 @@
 
 namespace control\profile;
 
-class ProfileControl {
+require_once '../../control/common/CrudControl.php';
 
-    protected $pdo;
-    protected $table;
+use control\common\CrudControl;
+
+
+class ProfileControl extends CrudControl{
 
     public function __construct() {
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_profile';
-    }
-
-    public function getAll() {
-        $consulta = $this->pdo->query("SELECT * FROM $this->table;");
-        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
     }
 
 }

@@ -2,19 +2,16 @@
 
 namespace control\schedule;
 
-class ScheduleControl {
+require_once '../../control/common/CrudControl.php';
 
-    protected $pdo;
-    protected $table;
+use control\common\CrudControl;
+
+class ScheduleControl extends CrudControl {
 
     public function __construct() {
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_schedule';
     }
 
-    public function getAll() {
-        $consulta = $this->pdo->query("SELECT * FROM $this->table;");
-        return $consulta->fetchAll(\PDO::FETCH_ASSOC);
-    }
-
+   
 }
