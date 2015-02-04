@@ -96,4 +96,4 @@ $client = new ClientControl();
     </ul>
 </div>
 <?php
-require_once '../../Public/footer.php';
+require_once '../../public/footer.php';
