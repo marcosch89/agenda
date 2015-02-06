@@ -13,21 +13,20 @@ $doctor = new DoctorControl();
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Médicos</h1>
-            <a href="DoctorRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+            <a href="/view/doctor/DoctorRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
                 Novo Médico</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
 
                     <tr>
                         <th> Nome Completo </th>
-                        <th> Estado </th>
-                        <th> Cidade </th>
-                        <th> Endereço </th>
-                        <th> Registro Geral </th>
-                        <th> Estado Civil </th>
-                        <th> CPF </th>
                         <th> Telefone </th>
                         <th> Email </th>
+                        <th> Cidade </th>
+                        <th> Estado </th>
+                        <th> Endereço </th>
+                        <th> Registro Geral </th>
+                        <th> CPF </th>
                         <th> Especialidade </th>
                         <th> Editar </th>
                         <th> Excluir </th>
@@ -38,15 +37,14 @@ $doctor = new DoctorControl();
                     <?php foreach ($doctor->getAll() as $value) : ?>
                         <tr>
                             <td> <?= $value['doctor_name']; ?> </td>
-                            <td> <?= $value['doctor_state']; ?> </td>
+                            <td> <?= $value['doctor_phone']; ?> </td>
+                            <td> <?= $value['doctor_email']; ?> </td>
                             <td> <?= $value['doctor_city']; ?> </td>
+                            <td> <?= $value['doctor_state']; ?> </td>
                             <td> <?= $value['doctor_adress']; ?> </td>
                             <td> <?= $value['doctor_rg']; ?> </td>
-                            <td> <?= $value['doctor_speciality']; ?> </td>
                             <td> <?= $value['doctor_cpf']; ?> </td>
-                            <td> <?= $value['doctor_phone']; ?> </td>
-                            <td> <?= $value['doctor_removed']; ?> </td>
-                            <td> <?= $value['doctor_email']; ?> </td>
+                            <td> <?= $value['doctor_speciality']; ?> </td>
                             <td> <a href="DoctorEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 

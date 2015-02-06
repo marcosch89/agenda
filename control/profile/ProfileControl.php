@@ -13,5 +13,11 @@ class ProfileControl extends CrudControl{
         $this->pdo = new \PDO("pgsql:dbname=appointment; host=localhost", "postgres", "m2smart");
         $this->table = 'appointment_profile';
     }
+     public function insert($data) {
+        $stmt = $this->pdo->prepare("INSERT INTO $this->table (profile_description)VALUES (:descricao)");
+        $stmt->execute(array(
+            ':descricao' => $data['descricao'],
+        ));
+    }
 
 }

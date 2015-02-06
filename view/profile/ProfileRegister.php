@@ -4,12 +4,12 @@ require_once '../../public/menu.php';
 ?>
 <div class="col-md-8 col-md-offset-2">
 
-    <form class="form-horizontal" role="form" action="ProfileList.php">
+    <form class="form-horizontal" role="form" action="../../control/profile/ProfileAction.php" method="POST">
         <h1 class="text-center">Cadastro de Perfis</h1>
         <div class="form-group">
             <label class="col-sm-3 control-label">Perfil:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="perfil">
+                <input type="text" name="descricao" class="form-control" placeholder="perfil">
             </div>
         </div>
         <div class="form-group">

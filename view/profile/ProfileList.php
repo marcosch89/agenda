@@ -13,7 +13,7 @@ $profile = new ProfileControl();
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Perfil</h1>
-            <a href="ProfileRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+            <a href="/view/profile/ProfileRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
                 Novo Perfil</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
