@@ -13,4 +13,11 @@ class SpecialityControl extends CrudControl {
         $this->table = 'appointment_speciality';
     }
 
+    public function insert($data) {
+        $stmt = $this->pdo->prepare("INSERT INTO $this->table (speciality_name)VALUES (:nome)");
+        $stmt->execute(array(
+            ':nome' => $data['nome'],
+        ));
+    }
+
 }

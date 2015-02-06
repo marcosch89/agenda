@@ -13,7 +13,7 @@ $speciality = new SpecialityControl();
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Especialidades</h1>
-            <a href="SpecialityRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+            <a href="../../view/speciality/SpecialityRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
                 Nova Especialidade</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>

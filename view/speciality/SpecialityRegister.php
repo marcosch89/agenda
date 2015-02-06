@@ -4,12 +4,12 @@ require_once '../../public/menu.php';
 ?>
 <div class="col-md-8 col-md-offset-2">
 
-    <form class="form-horizontal" role="form" action="SpecialityList.php">
+    <form class="form-horizontal" role="form" action="../../control/speciality/SpecialityAction.php" method="POST">
         <h1 class="text-center">Cadastro de Especialidade</h1>
         <div class="form-group">
             <label class="col-sm-3 control-label">Especialidade Nova:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Especialidade">
+                <input type="text" class="form-control" name="nome" placeholder="Especialidade">
             </div>
         </div>
         <div class="form-group">
