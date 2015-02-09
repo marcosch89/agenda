@@ -12,17 +12,15 @@ $schedule = new ScheduleControl();
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Horários Marcados</h1>
-            <a href="ScheduleRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+            <a href="/view/schedule/ScheduleRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
 
                 Novo Horário</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
                     <tr>
                         <th> Cliente </th>
-                        <th> CPF </th>
-                        <th> Data </th>
-                        <th> Horário </th>
                         <th> Médico </th>
+                        <th> Data/Hora </th>
                         <th> Editar </th>
                         <th> Excluir </th>
                     </tr>
@@ -35,8 +33,6 @@ $schedule = new ScheduleControl();
                             <td> <?= $value['schedule_client']; ?> </td>
                             <td> <?= $value['schedule_doctor']; ?> </td>
                             <td> <?= $value['schedule_time']; ?> </td>
-                            <td> <?= $value['schedule_removed']; ?> </td>
-                            <td> <?= $value['schedule_cpf']; ?> </td>
                             <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
                                     <i class="fa fa-trash fa-1x"></i>

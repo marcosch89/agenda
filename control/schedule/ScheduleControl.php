@@ -13,5 +13,16 @@ class ScheduleControl extends CrudControl {
         $this->table = 'appointment_schedule';
     }
 
-   
+    public function insert($data) {
+        $stmt = $this->pdo->prepare("INSERT INTO $this->table "
+                . "(schedule_client, schedule_doctor, schedule_time)"
+                . "VALUES "
+                . "(:cliente,:medico,:horario)");
+        $stmt->execute(array(
+            ':cliente' => $data['cliente'],
+            ':medico' => $data['medico'],
+            ':horario' => $data['horario'],
+        ));
+    }
+
 }

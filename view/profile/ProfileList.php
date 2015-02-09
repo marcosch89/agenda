@@ -29,7 +29,7 @@ $profile = new ProfileControl();
                     <?php foreach ($profile->getall() as $value) : ?>
                         <tr>
                             <td> <?= $value['profile_description']; ?> </td>
-                            <td> <a href="ProfileEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="ProfileEdit.php?id=<?= $value['profile_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>

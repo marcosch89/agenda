@@ -6,6 +6,10 @@ use control\profile\ProfileControl;
 
 $profile = new ProfileControl();
 
-$profile->insert($_POST);
+if (isset($_POST['id'])) {
+    $profile->edit($_POST);
+} else {
+    $profile->insert($_POST);
+}
 
 header("Location: ../../view/profile/ProfileList.php");
