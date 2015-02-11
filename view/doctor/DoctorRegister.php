@@ -85,7 +85,7 @@ require_once '../../public/menu.php';
             </div>
     </form>
 </div>
-<?php require_once '../../public/footer.php'; ?>
+<?php require_once '../../public/footer.php'; 
 
 
 

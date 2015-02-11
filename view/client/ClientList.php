@@ -1,5 +1,4 @@
 <?php
-require_once '../../public/restrito.php';
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
 require_once '../../control/client/ClientControl.php';
@@ -10,7 +9,7 @@ $client = new ClientControl();
 ?>
 
 
-<div class="row">
+<div class="row">   
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Clientes</h1>
@@ -42,11 +41,31 @@ $client = new ClientControl();
                             <td> <?= $value['client_city']; ?> </td>
                             <td> <?= $value['client_adress']; ?> </td>
                             <td> <?= $value['client_rg']; ?> </td>
-                            <td> <?= $value['client_relationship_status']; ?> </td>
+                            <td> <?php
+                                switch ($value['client_relationship_status']) {
+                                    case 1:
+                                        echo 'solteiro';
+                                        break;
+                                    case 2:
+                                        echo 'casado';
+                                        break;
+                                    case 3:
+                                        echo 'divorciado';
+                                        break;
+                                    case 4:
+                                        echo 'viúvo';
+                                        break;
+                                    case 5:
+                                        echo 'união estável';
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                ?> </td>
                             <td> <?= $value['client_cpf']; ?> </td>
                             <td> <?= $value['client_phone']; ?> </td>
                             <td> <?= $value['client_email']; ?> </td>
-                            <td> <a href="ClientEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="ClientEdit.php?id=<?= $value['client_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>

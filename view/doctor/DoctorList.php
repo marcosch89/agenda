@@ -22,8 +22,8 @@ $doctor = new DoctorControl();
                         <th> Nome Completo </th>
                         <th> Telefone </th>
                         <th> Email </th>
-                        <th> Cidade </th>
                         <th> Estado </th>
+                        <th> Cidade </th>
                         <th> Endereço </th>
                         <th> Registro Geral </th>
                         <th> CPF </th>
@@ -39,13 +39,33 @@ $doctor = new DoctorControl();
                             <td> <?= $value['doctor_name']; ?> </td>
                             <td> <?= $value['doctor_phone']; ?> </td>
                             <td> <?= $value['doctor_email']; ?> </td>
-                            <td> <?= $value['doctor_city']; ?> </td>
                             <td> <?= $value['doctor_state']; ?> </td>
+                            <td> <?= $value['doctor_city']; ?> </td>
                             <td> <?= $value['doctor_adress']; ?> </td>
                             <td> <?= $value['doctor_rg']; ?> </td>
                             <td> <?= $value['doctor_cpf']; ?> </td>
-                            <td> <?= $value['doctor_speciality']; ?> </td>
-                            <td> <a href="DoctorEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <?php
+                                switch ($value['doctor_speciality']) {
+                                    case 1:
+                                        echo 'Pediatra';
+                                        break;
+                                    case 2:
+                                        echo 'Dentista';
+                                        break;
+                                    case 3:
+                                        echo 'Dermatologista';
+                                        break;
+                                    case 4:
+                                        echo 'Fisioterapeuta';
+                                        break;
+                                    case 5:
+                                        echo 'Cardiologista';
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                ?> </td>
+                            <td> <a href="DoctorEdit.php?id=<?= $value['doctor_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
