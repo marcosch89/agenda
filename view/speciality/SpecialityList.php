@@ -29,7 +29,7 @@ $speciality = new SpecialityControl();
                     <?php foreach ($speciality->getAll() as $value) : ?>
                         <tr>
                             <td> <?= $value['speciality_name']; ?> </td>
-                            <td> <a href="SpecialityEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="SpecialityEdit.php?id=<?= $value['speciality_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>

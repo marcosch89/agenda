@@ -1,4 +1,4 @@
-<?php
+    <?php
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
 ?>
