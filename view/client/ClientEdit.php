@@ -44,7 +44,7 @@ $data = $client->getOne($_GET);
         <div class="form-group">
             <label class="col-sm-3 control-label">Endereço:</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" name="endereco" value="<?= $data['doctor_adress'] ?>">
+                <input type="text" class="form-control" name="endereco" value="<?= $data['client_adress'] ?>">
             </div>
         </div>
         <div class="form-group">

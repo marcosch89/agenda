@@ -33,7 +33,7 @@ $schedule = new ScheduleControl();
                             <td> <?= $value['schedule_client']; ?> </td>
                             <td> <?= $value['schedule_doctor']; ?> </td>
                             <td> <?= $value['schedule_time']; ?> </td>
-                            <td> <a href="ScheduleEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <a href="ScheduleEdit.php?id=<?= $value['schedule_id'] ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>

@@ -4,8 +4,12 @@ include_once './UserControl.php';
 
 use control\user\UserControl;
 
-$user = new UserControl();
 
-$user->insert($_POST);
+$user = new UserControl();
+if (isset($_POST['id'])) {
+    $user->edit($_POST);
+} else {
+    $user->insert($_POST);
+}
 
 header("Location: ../../view/user/UserList.php");

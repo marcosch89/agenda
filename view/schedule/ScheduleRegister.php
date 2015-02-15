@@ -15,7 +15,13 @@ require_once '../../public/menu.php';
         <div class="form-group">
             <label class="col-sm-3 control-label">Médico:</label>
             <div class="col-sm-9">
-                <input type="text" name="medico" class="form-control" placeholder="medico">
+                <select class="form-control" name="medico">
+                    <option value="1">Pediatra</option>
+                    <option value="2">Dentista</option>
+                    <option value="3">Fisioterapeuta</option>
+                    <option value="4">C. Geral</option>
+                    <option value="5">Cardiologista</option>
+                </select>
             </div>
         </div>
         <div class="form-group">

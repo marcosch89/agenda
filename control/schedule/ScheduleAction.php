@@ -5,7 +5,10 @@ include_once './ScheduleControl.php';
 use control\schedule\ScheduleControl;
 
 $schedule = new ScheduleControl();
-
-$schedule->insert($_POST);
+if (isset($_POST['id'])) {
+    $schedule->edit($_POST);
+} else {
+    $schedule->insert($_POST);
+}
 
 header("Location: ../../view/schedule/ScheduleList.php");

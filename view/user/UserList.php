@@ -1,5 +1,4 @@
 <?php
-require_once '../../public/restrito.php';
 require_once '../../public/header.php';
 require_once '../../public/menu.php';
 require_once '../../control/user/UserControl.php';
@@ -14,7 +13,7 @@ $user = new UserControl();
     <div class="col-md-10 col-md-offset-1">
         <div class="table-responsive">
             <h1 class="text-center">Lista de Usuários</h1>
-            <a href="UserRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
+            <a href="/view/user/UserRegister.php" class="btn btn-success"><i class="fa fa-plus-circle"></i>
                 Novo Usuário</a><br /><br />
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
@@ -30,9 +29,9 @@ $user = new UserControl();
                 <tbody>
                     <?php foreach ($user->getAll() as $value) : ?>
                         <tr>
-                            <td> <?=$value['user_name'];?> </td>
-                            <td> <?=$value['user_profile'];?> </td>
-                            <td> <a href="UserEdit.php" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
+                            <td> <?= $value['user_name']; ?> </td>
+                            <td> <?= $value['user_profile']; ?> </td>
+                            <td> <a href="UserEdit.php?id=<?= $value['user_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
 
                                     <i class="fa fa-trash fa-1x"></i>
