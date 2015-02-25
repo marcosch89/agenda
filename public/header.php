@@ -15,6 +15,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://cidades-estados-js.googlecode.com/files/cidades-estados-1.2-utf8.js"></script>
+        <script src="../../js/ajaxDel.js"></script>
 
-        
+
     </head>

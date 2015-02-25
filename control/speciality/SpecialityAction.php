@@ -11,4 +11,5 @@ if (isset($_POST['id'])) {
     $speciality->insert($_POST);
 }
 
+
 header("Location: ../../view/speciality/SpecialityList.php");

@@ -19,6 +19,7 @@ $client = new ClientControl();
                 <thead>
 
                     <tr>
+                        <th> ID </th>
                         <th> Nome Completo </th>
                         <th> Estado </th>
                         <th> Cidade </th>
@@ -36,6 +37,7 @@ $client = new ClientControl();
                 <tbody>
                     <?php foreach ($client->getAll() as $value) : ?>
                         <tr>
+                            <td> <?= $value['client_id']; ?> </td>
                             <td> <?= $value['client_name']; ?> </td>
                             <td> <?= $value['client_state']; ?> </td>
                             <td> <?= $value['client_city']; ?> </td>
@@ -66,7 +68,7 @@ $client = new ClientControl();
                             <td> <?= $value['client_phone']; ?> </td>
                             <td> <?= $value['client_email']; ?> </td>
                             <td> <a href="ClientEdit.php?id=<?= $value['client_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
@@ -85,12 +87,13 @@ $client = new ClientControl();
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
+            <input type="hidden" name="idregistro" value="">
             <div class="modal-body">
                 Tem certeza que deseja excluir este cliente?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger">Remover Cliente</button>
+                <button type="button" class="btn btn-danger" id="remove">Remover Cliente</button>
             </div>
         </div>
     </div>
