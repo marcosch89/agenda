@@ -19,6 +19,7 @@ $doctor = new DoctorControl();
                 <thead>
 
                     <tr>
+                        <th> ID </th>
                         <th> Nome Completo </th>
                         <th> Telefone </th>
                         <th> Email </th>
@@ -36,6 +37,7 @@ $doctor = new DoctorControl();
                 <tbody>
                     <?php foreach ($doctor->getAll() as $value) : ?>
                         <tr>
+                            <td> <?= $value['doctor_id']; ?> </td>
                             <td> <?= $value['doctor_name']; ?> </td>
                             <td> <?= $value['doctor_phone']; ?> </td>
                             <td> <?= $value['doctor_email']; ?> </td>
@@ -66,7 +68,7 @@ $doctor = new DoctorControl();
                                 }
                                 ?> </td>
                             <td> <a href="DoctorEdit.php?id=<?= $value['doctor_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
@@ -85,12 +87,13 @@ $doctor = new DoctorControl();
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
+            <input type="hidden" name="idregistro" value="">
             <div class="modal-body">
                 Tem certeza que deseja excluir este médico?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger">Remover Médico</button>
+                <button type="button" class="btn btn-danger" id="remove" name="medico">Remover Médico</button>
             </div>
         </div>
     </div>

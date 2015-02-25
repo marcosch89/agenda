@@ -93,7 +93,7 @@ $client = new ClientControl();
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger" id="remove">Remover Cliente</button>
+                <button type="button" class="btn btn-danger" id="remove" name="cliente">Remover Cliente</button>
             </div>
         </div>
     </div>
