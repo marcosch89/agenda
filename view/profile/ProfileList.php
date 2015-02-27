@@ -57,7 +57,7 @@ $profile = new ProfileControl();
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger" id="remove" name="especialidade">Remover Médico</button>
+                <button type="button" class="btn btn-danger" id="remove" name="perfil">Remover Médico</button>
             </div>
         </div>
     </div>

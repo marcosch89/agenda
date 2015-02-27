@@ -67,11 +67,11 @@ require_once '../../public/menu.php';
                 <label class="col-sm-3 control-label">Especialidade</label>
                 <div class="col-sm-9">
                     <select class="form-control" name="especialidade">
-                        <option value="1">Oncologista</option>
-                        <option value="2">Pediatra</option>
-                        <option value="3">Cirurgiao Geral</option>
-                        <option value="4">Odontologista</option>
-                        <option value="5">Fisioterapeuta</option>
+                        <option value="1">Pediatra</option>
+                        <option value="2">Dentista</option>
+                        <option value="3">Dermatologista</option>
+                        <option value="4">Fisioterapeuta</option>
+                        <option value="5">Cardiologista</option>
                     </select>
                 </div>
             </div>
