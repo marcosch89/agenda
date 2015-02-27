@@ -19,6 +19,7 @@ $user = new UserControl();
                 <thead>
 
                     <tr>
+                        <th> ID </th>
                         <th> Nome Completo </th>
                         <th> Perfil </th>
                         <th> Editar </th>
@@ -29,10 +30,14 @@ $user = new UserControl();
                 <tbody>
                     <?php foreach ($user->getAll() as $value) : ?>
                         <tr>
+                            <td> <?= $value['user_id']; ?> </td>
                             <td> <?= $value['user_name']; ?> </td>
                             <td> <?= $value['user_profile']; ?> </td>
                             <td> <a href="UserEdit.php?id=<?= $value['user_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <a href="UserDelete.php?id=<?= $value['user_id']; ?>" class="btn btn-danger"><i class="fa fa-pencil fa-2x"></i></a></td>
+                             <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
+
+                                    <i class="fa fa-trash fa-1x"></i>
+                                </button></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -41,6 +46,42 @@ $user = new UserControl();
 
     </div>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Excluir</h4>
+            </div>
+            <input type="hidden" name="idregistro" value="">
+            <div class="modal-body">
+                Tem certeza que deseja excluir este Usuário?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-danger" id="remove" name="usuario">Remover Médico</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="col-md-12 col-lg-offset-5">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
 <?php
 require_once '../../public/footer.php';

@@ -19,6 +19,7 @@ $speciality = new SpecialityControl();
                 <thead>
 
                     <tr>
+                        <th> ID </th>
                         <th> Tipo </th>
                         <th> Editar </th>
                         <th> Excluir </th>
@@ -28,9 +29,10 @@ $speciality = new SpecialityControl();
                 <tbody>
                     <?php foreach ($speciality->getAll() as $value) : ?>
                         <tr>
+                            <td> <?= $value['speciality_id']; ?> </td>
                             <td> <?= $value['speciality_name']; ?> </td>
                             <td> <a href="SpecialityEdit.php?id=<?= $value['speciality_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                           <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
@@ -49,12 +51,13 @@ $speciality = new SpecialityControl();
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
+            <input type="hidden" name="idregistro" value="">
             <div class="modal-body">
-                Tem certeza que deseja excluir esta especialidade?
+                Tem certeza que deseja excluir este Especialidade?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger">Remover Especialidade</button>
+                <button type="button" class="btn btn-danger" id="remove" name="especialidade">Remover Especialidade</button>
             </div>
         </div>
     </div>

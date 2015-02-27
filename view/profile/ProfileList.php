@@ -19,6 +19,7 @@ $profile = new ProfileControl();
                 <thead>
 
                     <tr>
+                        <th> ID </th>
                         <th> Descrição </th>
                         <th> Editar </th>
                         <th> Excluir </th>
@@ -28,9 +29,10 @@ $profile = new ProfileControl();
                 <tbody>
                     <?php foreach ($profile->getall() as $value) : ?>
                         <tr>
+                            <td> <?= $value['profile_id']; ?> </td>
                             <td> <?= $value['profile_description']; ?> </td>
                             <td> <a href="ProfileEdit.php?id=<?= $value['profile_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
 
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
@@ -49,12 +51,13 @@ $profile = new ProfileControl();
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
+            <input type="hidden" name="idregistro" value="">
             <div class="modal-body">
-                Tem certeza que deseja excluir este perfil?
+                Tem certeza que deseja excluir este Perfil?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger">Remover Perfil</button>
+                <button type="button" class="btn btn-danger" id="remove" name="especialidade">Remover Médico</button>
             </div>
         </div>
     </div>

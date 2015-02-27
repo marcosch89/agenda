@@ -29,11 +29,7 @@ class SpecialityControl extends CrudControl {
         ));
     }
 
-    public function delete($data) {
-        $stmt = $this->pdo->prepare("DELETE FROM $this->table WHERE speciality_id=:id;");
-        $stmt->execute(array(
-            ':id' => $data['id']
-        ));
-    }
+    
+    
 
 }

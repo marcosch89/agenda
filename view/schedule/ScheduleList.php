@@ -18,6 +18,7 @@ $schedule = new ScheduleControl();
             <table class="table table-hover table-bordered table-responsive table-condensed">
                 <thead>
                     <tr>
+                        <th> ID </th>
                         <th> Cliente </th>
                         <th> Médico </th>
                         <th> Data/Hora </th>
@@ -30,11 +31,12 @@ $schedule = new ScheduleControl();
 
 
                         <tr>
+                            <td> <?= $value['schedule_id']; ?> </td>
                             <td> <?= $value['schedule_client']; ?> </td>
                             <td> <?= $value['schedule_doctor']; ?> </td>
                             <td> <?= $value['schedule_time']; ?> </td>
                             <td> <a href="ScheduleEdit.php?id=<?= $value['schedule_id'] ?>" class="btn btn-warning"><i class="fa fa-pencil fa-2x"></i></a></td>
-                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                            <td> <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" name="removerregistro">
                                     <i class="fa fa-trash fa-1x"></i>
                                 </button></td>
                         </tr>
@@ -51,12 +53,13 @@ $schedule = new ScheduleControl();
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Excluir</h4>
             </div>
+            <input type="hidden" name="idregistro" value="">
             <div class="modal-body">
                 Tem certeza que deseja excluir este horário?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-danger">Remover Horário</button>
+                <button type="button" class="btn btn-danger" id="remove" name="horario">Remover Horário</button>
             </div>
         </div>
     </div>
